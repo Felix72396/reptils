@@ -1,0 +1,130 @@
+article{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+section.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 5px;
+    overflow: hidden;
+}
+
+section.container div.card{
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(45deg, rgb(125, 225, 185), rgb(5, 82, 24));
+    background-size: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s all;
+    place-self: center;
+  
+    overflow: hidden;
+}
+
+
+div.card:hover::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    z-index: 1;
+    width: 50px;
+    height: 200%;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    opacity: .1;
+    animation: mover 3s ease-in-out infinite;
+}
+
+@keyframes mover {
+    0%{
+        left: -80%;
+    }
+    30%,100%{
+        left: 150%;
+    }
+
+}
+
+section.container div.card:hover{
+   transform: scale(1.05); 
+   color: #fff;
+   background-size: 50%;
+   box-shadow: 0 0 .5rem 100rem rgba(0, 0, 0, 0.687);
+}
+
+div.card img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+section.container div.card:hover img{
+    mix-blend-mode:luminosity;
+ }
+
+div.card h2{
+    font-size: 12px;
+    block-size: 30px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    transition: 1s all;
+    border-radius: 0;
+}
+
+section.container div.card:hover h2{
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 5px;
+}
+
+div.card p{
+    font-size: 12px;
+    display: none;
+}
+
+section.img-contenedor img{
+    width: 100%;
+}
+
+section:is(.habitat, .video) h2{
+    text-align: center;
+}
+
+section.habitat{
+    background-color: rgb(101, 230, 178);
+}
+
+section.video{
+    display: grid;
+    place-content: center;
+    background-color: rgb(105, 243, 153);
+    padding-block: 10px;
+}
+
+#mantenimiento-reptiles 
+{
+    display: block;
+    position: fixed;
+    top: 350px;
+    left: 68%;
+    padding: 20px;
+    background-color: rgb(233, 212, 58);
+    color: #fff;
+    border-radius: 10px;
+    z-index: 10;
+    text-decoration: none;
+    opacity: .7;
+    transition: 1s all;
+}
+
+#mantenimiento-reptiles:hover{
+    transform: rotate(15deg);
+    opacity: 1;
+    color: #fff;
+}
+
+

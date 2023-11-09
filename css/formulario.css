@@ -1,0 +1,85 @@
+/* html#contacto main{
+    height: 600px;
+} */
+
+html#contacto main article{
+    height: 100%;
+}
+
+form{
+    background-color: #3CC18C;
+    display: grid;
+    place-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+fieldset{
+    width: 700px;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+legend{
+    font-size: 20px;
+    color: #fff;
+}
+
+fieldset label{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.1;
+    text-align: center;
+    width: 100%;
+}
+
+fieldset label input{
+    padding: 5px;
+    display: block;
+    width: 300px;
+    text-align: center;
+    border: 0;
+    outline: 1px solid #fff;
+    transition: .5s all;
+}
+
+fieldset label input:focus{
+    outline-offset: 2px;
+}
+
+textarea{
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 100px;
+    height: 200px;
+    max-height: 300px;
+    padding: 20px;
+    outline: 1px solid #fff;
+    transition: .5s all;
+}
+
+fieldset label textarea:focus{
+    outline-offset: 2px;
+}
+
+fieldset section{
+    padding-block: 5px;
+}
+
+fieldset input[type="submit"]
+{
+    padding: 15px 5px;
+    background-color: #3CC18C;
+    color: #fff;
+    border: 1px solid;
+    width: 100%;
+    font-size: 16px;
+    transition: .5s all;
+}
+
+fieldset input[type="submit"]:hover{
+    background-color: #33a879;
+    cursor: pointer;
+}

@@ -1,0 +1,262 @@
+@import url("../css/reptiles.css");
+@import url("../css/formulario.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    width: 750px;
+    height: auto;
+    background-color: rgb(134, 233, 184);
+
+    margin-inline: auto;
+    position: relative;
+
+    border-inline: 1px solid #fff;
+    display: grid;
+    grid-template-rows: 250px 50px minmax(714px, 1fr) 50px;
+    overflow-x: hidden;
+}
+
+header{
+
+    width: 100%;
+}
+
+
+header section#logo
+{
+    width: 250px;
+    float: left;
+}
+
+section#logo img{
+    width: 100%;
+    transform: rotate(0);
+    position: relative;
+    animation: rotar 10s ease-in-out infinite;
+}
+
+@keyframes rotar {
+    10%{
+        transform: rotate(1turn);
+    }
+}
+
+
+header section#banner{
+    width: 497px;
+    float: left;
+}
+
+section#banner img{
+    width: 100%;
+    height: 250px;
+    animation: opacidad 10s ease-in-out infinite;
+}
+
+@keyframes opacidad {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .3;
+    }
+}
+
+
+nav{
+    display: flow-root;
+    width: 100%;
+    /* height: 50px; */
+    background-color: rgb(161, 224, 211);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+
+}
+
+li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    height: 50px;
+    background-color: rgb(60, 193, 140);
+    border: 1px solid #fff;
+    border-left: 0;
+    display: grid;
+    place-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: .5s all ease-in-out;
+    box-shadow: 0 0 0rem 0 rgb(252, 255, 252);
+}
+
+li:nth-last-of-type(1){
+    border-right: 0;
+}
+
+li:hover{
+    background-color: rgb(94, 248, 189);
+    cursor: pointer;
+    box-shadow: 0 0 100rem 2rem rgb(255, 255, 255);
+    font-size: 1.4rem;
+}
+
+li a{
+    text-decoration: none;
+    width: 187.5px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    transition: 1s all;
+}
+
+li a:hover{
+    color: #717171;
+}
+
+li a::before, li a::after{
+    content: "";
+    position: absolute;
+    left: -15%;
+    width: 20px;
+    height: 100%;
+    background-color: #fff;
+    opacity: .3;
+    transition: .5s all ease-in;
+}
+
+li a::after{
+    left: 110%;
+    z-index: -1;
+    transform: rotate(0);
+}
+
+li a:hover::before{
+    left: 100%;
+    width: 60%;
+}
+
+li a:hover::after{
+    left: -10%;
+    width: 80%;
+    background-color: rgb(12, 86, 39);
+    animation: rotar .4s linear infinite;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding-block: 5px;
+}
+
+main{
+    flex-grow: 1;
+    position: relative;
+    /* this makes the main occupy space and pushes the footer below*/
+}
+
+
+main article section p{
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+footer{
+    width: 100%;
+    /* height: 50px; */
+    background-color: rgb(60, 193, 140);
+    /* background-color: red; */
+    color: #fff;
+    text-align: left;
+    border-block: 1px solid;
+}
+
+footer address{
+    display: flow-root;
+    
+}
+
+footer address section:first-child{
+    float: left;
+}
+
+footer address section:last-child{
+    float: right;
+}
+
+address a{
+    color: rgb(0, 0, 0);
+}
+
+footer section.copy{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(60, 151, 115);
+    padding: 2px;
+    border-top: 1px solid;
+
+}
+
+a#flecha{
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: -25px;
+    bottom: 50px;
+}
+
+a#flecha img{
+    width: 100%;
+}
+
+.animate{
+    z-index: -1;
+    display: block;
+    position: absolute;
+    border-radius: 100% 0 100% 0;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(2, 49, 12, 0.603);
+    animation: animate 5s ease-in;
+}
+
+@keyframes animate {
+    0%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(var(--size)) rotate(3turn) skewX(5deg) translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+    }
+}
+
+
+

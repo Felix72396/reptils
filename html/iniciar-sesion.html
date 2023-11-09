@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptiles | Iniciar Sesión</title>
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css" type="text/css">
+
+    <style>
+        body{
+            position: relative;
+        }
+
+        form{
+            inset: 0;
+            margin: auto;
+            position: absolute;
+            height: 400px;
+            width: 500px;
+        
+        }
+
+        fieldset{
+            width: 50%;
+            background-color: rgb(88, 224, 168);
+            text-align: center;
+    
+        }
+
+        fieldset:hover legend{
+            background-color: #3a9769;
+            color: #ffffff;
+            border-radius: 25px;
+            width: 100%;
+            padding-block: 10px;
+            position: relative;
+            transform: translateY(-10px);
+            /* margin-top: -25px; */
+        }
+
+        legend{
+            width: 70%;
+            margin-inline: auto;
+            background-color: #86E9B8;
+            color: #000;
+            padding: 5px;
+          
+            border: 1px solid #fff;
+            transition: .8s all;
+        }
+
+        [type="submit"]{
+            background-color: #fff !important;
+            color: #000 !important;
+            border: none !important;
+            width: 100%;
+            padding-block: 10px;
+            cursor: pointer;
+            transition: .5s all;
+        }
+
+        [type="submit"]:hover{
+            background-color: rgb(38, 151, 104)!important;
+            color: #fff!important;
+        }
+    </style>
+</head>
+<body>
+    <header id="arriba">
+        <section id="logo">
+            <a href="../index.html">
+                <img src="../img/icon.png" alt="logo de la pagina">
+            </a>
+        </section>
+        <section id="banner">
+            <img src="../img/banner.jpg" alt="Imagen de reptil">
+        </section>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="acerca_de.html">Acerca de</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li id="sesion"><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside id="left"> </aside>
+        <article>
+            <form id="frm">
+                <fieldset>
+                    <legend>Iniciar Sesión</legend>
+        
+                    <label for="txt-usuario">
+                        Usuario: 
+                        <input type="text" placeholder="Usuario..." name="usuario" id="txt-usuario" required>
+                    </label>
+                    <br>
+                    <label for="txt-contrasena">
+                        Contraseña: 
+                        <input type="password" placeholder="Contraseña..." name="contrasena" id="txt-contrasena" required>
+                    </label>
+                    <br>
+                    <input type="submit" value="Iniciar Sesión">
+                </fieldset>
+            </form>
+        </article>
+        <aside id="right"></aside>
+    </main>
+    
+
+    <footer>
+        <address>
+            <section>
+                <label>Correo electrónico de Félix: <a href="mailto:">fpg72396@gmail.com</a></label> <br>
+                <label>Teléfono: <a href="tel:+">8094216099</a></label>
+            </section>
+            <section>
+                <label>Correo electrónico de Luis: <a href="mailto:">houstoluis@gmail.com</a></label> <br>
+                <label>Teléfono: <a href="tel:+">8292747830</a></label> 
+            </section>
+        </address>
+        <section class="copy">
+            <p>Félix y Luis &copy; 2023 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+    <script src="../js/fetch-login.js"></script>
+</body>
+</html>

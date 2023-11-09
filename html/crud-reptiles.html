@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptiles | CRUD Reptiles</title>
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="../css/crud.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body data-page="crud-reptiles">
+    <header id="arriba">
+        <section id="logo">
+            <a href="../index.html">
+                <img src="../img/icon.png" alt="logo de la pagina">
+            </a>
+        </section>
+        <section id="banner">
+            <img src="../img/banner.jpg" alt="Imagen de reptil">
+        </section>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="acerca_de.html">Acerca de</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li id="sesion"><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside id="left"> </aside>
+        <article>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE CIENTÍFICO</th>
+                        <th>NOMBRE COMÚN</th>
+                        <th>PAÍS DE ORIGEN</th>
+                        <th>EXTINTO</th>
+                        <th>FOTO</th>
+                        <th colspan="2">ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="9">
+                            <button id="btn-call-frm-add" class="add" title="Añadir reptíl">
+                                <img src="../img/add.png">
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+        <aside id="right"></aside>
+
+        
+    </main>
+
+    <footer>
+        <address>
+            <section>
+                <label>Correo electrónico de Félix: <a href="mailto:">fpg72396@gmail.com</a></label> <br>
+                <label>Teléfono: <a href="tel:+">8094216099</a></label>
+            </section>
+            <section>
+                <label>Correo electrónico de Luis: <a href="mailto:">houstoluis@gmail.com</a></label> <br>
+                <label>Teléfono: <a href="tel:+">8292747830</a></label>
+            </section>
+        </address>
+        <section class="copy">
+            <p>Félix y Luis &copy; 2023 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+    <form enctype="multipart/form-data" style="display: none;">
+        <fieldset>
+            <a class="close">&times;</a>
+
+            <legend>Añade un reptíl</legend>
+            <label>
+                Nombre científico:
+                <input type="text" name="nombre_cientifico" placeholder="Nombre científico..." required>
+            </label>
+            <br>
+            <label>
+                Nombre común:
+                <input type="text" name="nombre_comun" placeholder="Nombre común..." required>
+            </label>
+            <br>
+            <label>
+                País de origen:
+                <input type="text" name="pais_de_origen" placeholder="Páis/Origen..." required>
+            </label>
+            <br>
+            <label>
+                Extinto:
+                <input type="checkbox" name="extinto">
+            </label>   
+            <br>
+            <label>
+                Foto:
+                <label class="file" for="file">
+                    <img src="../img/camera.png">
+                </label>
+                <input id="file" type="file" name="foto" style="display: none;">
+            </label>
+            <!-- <br> -->
+            <div id="img-container">
+                <img src="">
+            </div>
+           
+
+
+            <input type="hidden" name="id" id="txt-hidden" style="display: none;">
+
+            <button type="submit" name="send" data-btn="add">
+                AGREGAR
+            </button>
+        </fieldset>
+    </form>
+
+    <script src="../js/login-check.js"></script>
+    <script src="../js/form-caller.js"></script>
+    <script src="../js/crud.js"></script>
+    <script src="../js/getReptils.js"></script>
+
+</body>
+
+</html>
